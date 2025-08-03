@@ -1,4 +1,5 @@
 let form=document.getElementById("myform").addEventListener('submit',(event)=>{
+    
     event.preventDefault();
     let value=document.getElementById("inputf").value;
     let reg=/\d/g;
@@ -6,7 +7,8 @@ let form=document.getElementById("myform").addEventListener('submit',(event)=>{
     let result=value.match(reg);
     console.log(result)
     for (x in result){
-        sum += x;
+        console.log(x)
+        sum += Number(result[x]);
     }
     let element = document.createElement('p');
     element.id='par'
